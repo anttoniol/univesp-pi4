@@ -1,9 +1,8 @@
 {
     "key": "",
-    "folder": "data",
+    "folder": "data/air_pollution",
     "lat": -23.5505, 
     "lon": -46.6333,
     "initial_date": "2025-09-01",
-    "final_date": "2025-10-01",
-    "tz": "-03:00"
+    "final_date": "2025-10-01"
 }

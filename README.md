@@ -9,3 +9,9 @@
 5. Para executar a aplicação, executar no diretório raiz:
     1. `python3 service.py` (Linux)
     2. `python service.py` (Windows)
+
+
+## APIs utilizadas
+
+1. OpenWeatherMap Air Pollution: https://openweathermap.org/api/air-pollution
+2. OpenWeatherMap Weather History: https://openweathermap.org/api/one-call-3#history

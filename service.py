@@ -22,38 +22,30 @@ def read_json_file(filepath):
 
 properties = read_json_file("properties.json")
 
-lat = properties["lat"]
-lon = properties["lon"]
-tz = properties["tz"]
-units = "metric"
-appid = properties["key"]
-params = {
-    "lat": lat,
-    "lon": lon,
-    "tz": tz,
-    "units": units,
-    "appid": appid
-
-}
-url = "https://api.openweathermap.org/data/3.0/onecall/day_summary"
+url = "http://api.openweathermap.org/data/2.5/air_pollution/history"
 folder = properties['folder']
 os.makedirs(folder, exist_ok=True)
 
 delta = datetime.timedelta(days=1)
 format = "%Y-%m-%d"
-start_date = datetime.datetime.strptime(properties["initial_date"], format)
-end_date = datetime.datetime.strptime(properties["final_date"], format)
-current_date = start_date
+start_date = datetime.datetime.strptime(properties["initial_date"], format).timestamp()
+end_date = datetime.datetime.strptime(properties["final_date"], format).timestamp()
 
-while current_date <= end_date:
-    date = datetime.datetime.strftime(current_date, format)
-    params["date"] = date
-    result = requests.get(url, params=params)
-    data = result.json()
-    
-    filename = f"{date}.json"
+lat = properties["lat"]
+lon = properties["lon"]
+appid = properties["key"]
+params = {
+    "lat": lat,
+    "lon": lon,
+    "appid": appid
 
-    with open(f"{folder}/{filename}", 'w') as f:
-        json.dump(data, f, indent=4)
+}
+params["start"] = int(start_date)
+params["end"] = int(end_date)
 
-    current_date += delta
+result = requests.get(url, params=params)
+data = result.json()
+
+filename = f"{properties['initial_date']}_{properties['final_date']}.json"
+with open(f"{folder}/{filename}", 'w') as f:
+    json.dump(data, f, indent=4)
