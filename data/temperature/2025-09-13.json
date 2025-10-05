@@ -1,0 +1,33 @@
+{
+    "lat": -23.5505,
+    "lon": -46.6333,
+    "tz": "-03:00",
+    "date": "2025-09-13",
+    "units": "metric",
+    "cloud_cover": {
+        "afternoon": 75.0
+    },
+    "humidity": {
+        "afternoon": 67.0
+    },
+    "precipitation": {
+        "total": 0.0
+    },
+    "temperature": {
+        "min": 14.4,
+        "max": 19.21,
+        "afternoon": 18.8,
+        "night": 15.4,
+        "evening": 16.66,
+        "morning": 14.77
+    },
+    "pressure": {
+        "afternoon": 1023.0
+    },
+    "wind": {
+        "max": {
+            "speed": 6.69,
+            "direction": 160.0
+        }
+    }
+}
