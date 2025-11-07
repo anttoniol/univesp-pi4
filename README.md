@@ -7,8 +7,15 @@
 5. Instalar o interpretador do Python: https://www.python.org/downloads/
 6. Instalar as bibliotecas contidas no arquivo requirements.txt, utilizando o seguinte comando: `pip install -r requirements.txt`
 5. Para executar a aplicação, executar no diretório raiz:
-    1. `python3 service.py` (Linux)
-    2. `python service.py` (Windows)
+    1. Para consumir a API do Open Weather Map:
+        1. `python3 owm_consumer.py` (Linux)
+        2. `python owm_consumer.py` (Windows)
+    2. Para converter um arquivo JSON em um arquivo CSV:
+        1. `python3 json_converter.py` (Linux)
+        2. `python json_converter.py` (Windows)
+    3. Para criar e treinar um modelo de regressão linear:
+        1. `python3 prediction.py` (Linux)
+        2. `python prediction.py` (Windows)
 
 
 ## APIs utilizadas

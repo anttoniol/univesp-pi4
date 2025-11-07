@@ -25,4 +25,4 @@ for element in elements:
     row.append(element["main"]["aqi"])
     dataframe.loc[len(dataframe)] = row
 
-dataframe.to_csv("data/air_pollution/2025-09-01_2025-10-01.csv", sep = ";", index=False)
+dataframe.to_csv("data/air_pollution/2025-09-01_2025-10-01.csv", sep = ";", index=False, index_label=True)
