@@ -7,6 +7,8 @@ from json_reader import read_json_file
 
 properties = read_json_file("properties.json")
 
+url_forecast = "http://api.openweathermap.org/data/2.5/air_pollution/forecast"
+
 url = "http://api.openweathermap.org/data/2.5/air_pollution/history"
 folder = properties['folder']
 os.makedirs(folder, exist_ok=True)

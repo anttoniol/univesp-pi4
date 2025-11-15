@@ -2,8 +2,9 @@ from json_reader import read_json_file
 import pandas as pd
 
 
-filepath = "data/air_pollution/2025-09-01_2025-10-01.json"
-content = read_json_file(filepath)
+filename = "data/air_pollution/2025-10-02_2025-10-15"
+initial_format = ".json"
+content = read_json_file(filename + initial_format)
 
 elements = content["list"]
 array = list()
@@ -25,4 +26,5 @@ for element in elements:
     row.append(element["main"]["aqi"])
     dataframe.loc[len(dataframe)] = row
 
-dataframe.to_csv("data/air_pollution/2025-09-01_2025-10-01.csv", sep = ";", index=False, index_label=True)
+final_format = ".csv"
+dataframe.to_csv(filename + final_format, sep = ";", index=False, index_label=True)
