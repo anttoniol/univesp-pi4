@@ -22,3 +22,8 @@
 
 1. OpenWeatherMap Air Pollution: https://openweathermap.org/api/air-pollution
 2. OpenWeatherMap Weather History: https://openweathermap.org/api/one-call-3#history
+
+
+## Power BI
+1. Os arquivos com as análises feitas no Power BI estão na pasta `data/power_bi`
+2. Os arquivos devem ser abertos utilizando a versão web ou desktop do Power BI
